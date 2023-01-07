@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "todo-e0c9f": {
+      "hosting": {
+        "todo": [
+          "todo-e0c9f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "todo-e0c9f"
+  }
+}
