@@ -1,7 +1,12 @@
-<div *ngIf="authService.uid">
-    <app-list></app-list>
-    <app-create></app-create>
-</div>
-<div *ngIf="!authService.uid">
-    <app-login></app-login>
+<div>
+    <div *ngIf="authService.auth.user | async; else showLogin">
+        <div class="container mx-auto">
+            <app-create></app-create>
+            <app-list></app-list>
+            <button (click)="authService.auth.signOut()">Kijelentkezés</button>
+        </div>
+    </div>
+    <ng-template #showLogin>
+        <app-login></app-login>
+    </ng-template>
 </div>
