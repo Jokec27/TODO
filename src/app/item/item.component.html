@@ -1,3 +1,5 @@
-<input (click)="ChangeStatus()" type="checkbox" [(ngModel)]="item.done">
-<p>{{ item.text }}</p>
-<button (click)="DeleteTodo()">Törlés</button>
+<div class="grid lg:grid-cols-12 sm:grid-cols-3 rounded-lg border-2 shadow-lg p-2 mb-2">
+    <input class="w-6 h-6 lg:col-start-2 lg:col-end-3 sm:col-span-1 bg-green-500" (click)="ChangeStatus()" type="checkbox" [(ngModel)]="item.done">
+    <p class="font-mono text-2xl lg:col-start-3 sm:col-span-1 break-keep">{{ item.text }}</p>
+    <button class="bg-red-600 rounded-lg p-2 hover:bg-red-700 text-white text-xl lg:col-start-11 lg:col-end-12 sm:col-span-1" (click)="DeleteTodo()">Törlés</button>
+</div>
